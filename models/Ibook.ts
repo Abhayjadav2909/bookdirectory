@@ -5,5 +5,7 @@ export interface IBook {
     Bookversion: string;
     price: number;
     pages: number;
+    password : String,
+    email : string
   }
   

@@ -12,8 +12,17 @@ BookRouter.post("/register",[
     body("Bookversion").not().isEmpty().withMessage("Bookversion is Required"),
     body("price").not().isEmpty().withMessage("price is Required"),
     body("pages").not().isEmpty().withMessage("pages is Required"),
+    body("password").not().isEmpty().withMessage("password is Required"),
+    body("email").not().isEmpty().withMessage("email is Required"),
 ],async(request : Request , response : Response)=>{
     await BookController.Addbook(request,response)
+})
+
+BookRouter.post("/login",[
+    body("password").not().isEmpty().withMessage("password is Required"),
+    body("email").not().isEmpty().withMessage("email is Required"),
+],async(request : Request , response : Response)=>{
+    await BookController.loginbook(request,response)
 })
 
 

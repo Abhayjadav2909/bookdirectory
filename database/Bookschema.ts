@@ -8,7 +8,9 @@ const BookScema = new mongoose.Schema({
     AutherName : {type : String , require : true},
     Bookversion : {type :String , require :true},
     price : {type : Number , require : true},
-    pages : {type : Number , require : true}
+    pages : {type : Number , require : true},
+    password : {type : String , require : true},
+    email: {type : String , require : true},
 },{timestamps : true})
 
 const Booktable = mongoose.model<IBook>("Books",BookScema)
