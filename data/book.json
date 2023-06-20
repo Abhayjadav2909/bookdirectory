@@ -22,6 +22,14 @@
         "Book version":"2nd Edition",
         "price":300,
         "pages":900
+    },
+    {   
+        "id":"4",
+        "Bookname" :"Rich dad Poor dad",
+        "AutherName":"Dannis Ricchi",
+        "Book version":"1st Edition",
+        "price":150,
+        "pages":900
     }
 ]
 
