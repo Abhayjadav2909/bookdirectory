@@ -67,8 +67,6 @@ BookRouter.delete("/:bookid",async(request : Request , response : Response)=>{
     await BookController.deletebook(request,response) 
 })
 
-// BookRouter.post("/me",async(request: Request, response: Response) => {
-//     await BookController.tokenVerifier(request, response);
-// });
+
 
 export default BookRouter
