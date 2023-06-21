@@ -11,6 +11,7 @@ const BookScema = new mongoose.Schema({
     pages : {type : Number , require : true},
     password : {type : String , require : true},
     email: {type : String , require : true},
+    image  : {type : String , require : true}
 },{timestamps : true})
 
 const Booktable = mongoose.model<IBook>("Books",BookScema)

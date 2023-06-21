@@ -21,17 +21,16 @@ app.get("/",(request : Request , response : Response)=>{
     })
 })
 
-app.use(express.json())
+app.use(express.json()) 
 app.use("/book",BookRouter)
+
 if(port && hostname){
     app.listen(Number(port),()=>{
         if(DbUrl && DbDataBase){
             DButil.connectToDb(DbUrl,DbDataBase).then((dbResponse)=>{
                 console.log(dbResponse);
-                
             })
         }
         console.log(`Server Has Been Started At http://${hostname}:${port}`);
-        
     })
 }

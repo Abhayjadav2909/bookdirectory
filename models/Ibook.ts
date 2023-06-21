@@ -6,6 +6,7 @@ export interface IBook {
     price: number;
     pages: number;
     password : String,
-    email : string
+    email : string,
+    image : string
   }
   
