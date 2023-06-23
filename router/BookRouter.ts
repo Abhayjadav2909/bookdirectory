@@ -7,6 +7,7 @@ const BookRouter : Router = Router()
 
 const multer = require("multer")
 
+BookRouter.use(express.static('public'));
 
 const storage = multer.diskStorage({
         destination : function(request : Request,file: any,cb :any)
@@ -36,7 +37,7 @@ BookRouter.post("/register",[
             body("pages").not().isEmpty().withMessage("pages is Required"),
             body("password").not().isEmpty().withMessage("password is Required"),
             body("email").not().isEmpty().withMessage("email is Required"),
-            body("image").not().isEmpty().withMessage("image is Required"),
+            // body("image").not().isEmpty().withMessage("image is Required"),
 ],async(request : Request , response : Response)=>{
     await BookController.Addbook(request,response)
 })
